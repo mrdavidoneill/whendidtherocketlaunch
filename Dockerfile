@@ -15,6 +15,3 @@ RUN pip install -r requirements.txt
 
 # copy project
 COPY . .
-
-# Run starting script
-CMD ["python", "./main.py"]
