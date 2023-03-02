@@ -36,7 +36,7 @@ logger.addHandler(ch)
 filepath = os.path.join(
     os.path.dirname(__file__), *["logs", "whendidtherocketlaunch_bot.log"]
 )
-fh = logging.handlers.RotatingFileHandler(filepath, maxBytes=1024 * 8, backupCount=1)
+fh = logging.handlers.RotatingFileHandler(filepath, maxBytes=1024 * 1024, backupCount=1)
 fh.setLevel(FILE_LEVEL)
 fh.setFormatter(formatter)
 logger.addHandler(fh)
