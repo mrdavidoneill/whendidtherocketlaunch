@@ -67,6 +67,7 @@ async def check_photo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int
     bisector = get_or_create_bisector(context)
     logger.info("%s input: %s", update.message.from_user, update.message.text)
 
+    # Process user input
     if update.message.text == "/start":
         logger.info("Video with %s frames", bisector.count)
     else:
@@ -93,12 +94,7 @@ async def check_photo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int
 
     # Show mid frame to user
     await context.bot.send_photo(update.message.chat.id, bisector.image)
-    # Get y or no
-    # If y:
-    #    move right to mid
-    # else:
-    #    move left to mid
-
+    # Ask user if rocket has taken off
     await update.message.reply_text(
         "Has the rocket taken off?",
         reply_markup=ReplyKeyboardMarkup(
