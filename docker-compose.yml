@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   bot:
-    build: .
+    image: mrdavidoneill/whendidtherocketlaunch_bot:latest
     command: "python ./main.py"
     restart: unless-stopped
     env_file:
