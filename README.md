@@ -2,6 +2,8 @@
 
 This project is a chatbot that interacts with users in Telegram, to determine the exact frame that the rocket launched. The chatbot is built using Python and the Telegram Bot API.
 
+![Chatbot screenshot](https://mrdavidoneill.com/images/whendidtherocketlaunch001.png)
+
 ## Getting Started
 
 To run the chatbot locally, you'll need to do the following:
